@@ -1,4 +1,4 @@
-import Client from './api.js'
+import Client from './API.js'
 
 export const GetComments = async () => {
   try {

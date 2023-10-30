@@ -1,8 +1,11 @@
 {
+  "scripts": {
+    "start": "serve -s client/build -l $PORT"
+  },
   "dependencies": {
     "serve": "^14.2.1"
   },
-  "scripts": {
-    "start": "serve -s client/build -l 3000"
+  "engines": {
+    "node": "21.x"
   }
 }
