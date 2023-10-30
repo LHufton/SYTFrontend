@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { GetPosts } from '../../services/PostServices'
-import { GetComments } from '../../services/CommentServices'
+import { GetPosts } from '../../Services/PostServices'
+import { GetComments } from '../../Services/CommentServices'
 
 const Feed = ({ user }) => {
   const [posts, setPosts] = useState([])
