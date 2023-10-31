@@ -1,4 +1,4 @@
-import Client from './API.js'
+import Client from './api.js'
 
 export const GetComments = async () => {
   try {
@@ -18,7 +18,7 @@ export const CreateComments = async (comment) => {
   }
 }
 
-export const UpdateComments = async (comment) => {
+export const UpdateComments = async (comments_id) => {
   try {
     const res = await Client.put(`/comments/${comments_id}`)
     return res.data

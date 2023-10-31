@@ -1,4 +1,5 @@
-import Client from './API.js'
+import Client from './api.js'
+import axios from 'axios'
 
 export const GetPosts = async () => {
   try {
@@ -34,3 +35,7 @@ export const DeletePosts = async () => {
     throw error
   }
 }
+
+export default axios.create({
+  baseURL: 'https://your-api-url.com'
+})
