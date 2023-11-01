@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { GetPosts } from '../Services/PostServices'
+import { GetPosts } from '../../Services/PostServices'
 import { GetComments } from '../../Services/CommentServices'
 
 const Feed = ({ user }) => {
