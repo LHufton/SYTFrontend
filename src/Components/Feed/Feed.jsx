@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { GetPosts } from '../../services/PostServices'
-import { GetComments } from '../../services/CommentServices'
+import { GetPosts } from '../../Services/PostServices'
+import { GetComments } from '../../Services/CommentServices'
 
 const Feed = ({ user }) => {
   const [posts, setPosts] = useState([])
@@ -37,18 +37,15 @@ const Feed = ({ user }) => {
   const handleCommentSubmit = (postId) => {
     const text = comments[postId] || ''
     if (text.trim() === '') {
-      return // Don't submit empty comments
+      return
     }
 
-    // Here, you should implement the logic to save the comment to the backend.
-    // For demonstration purposes, we'll just update the state with a temporary ID.
     const newComment = {
       id: Date.now(),
       postId,
       text
     }
 
-    // Add the new comment to the comments state
     setComments((prevComments) => ({
       ...prevComments,
       [postId]: ''
