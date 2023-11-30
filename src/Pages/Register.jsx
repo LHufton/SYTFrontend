@@ -35,7 +35,6 @@ const Register = () => {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
-        <img src="https://i.imgur.com/IFdGirC.jpg" />
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label htmlFor="name">Name</label>
