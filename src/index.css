@@ -1,3 +1,19 @@
+@media only screen and (min-width; 768px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    font-family: Helvetica;
+    display: grid;
+    /* mobile first - single column */
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 30px auto 100px;
+    grid-template-areas:
+      "hdr"
+      "ftr"
+      "content"
+      "side";
+  }
+  }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
