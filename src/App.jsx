@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { CheckSession } from './Services/Auth.js'
 import Nav from './Components/Nav/Nav.jsx'
 import Feed from './Components/Feed/Feed.jsx'
@@ -59,25 +59,23 @@ const App = () => {
   }, [themeMode])
 
   return (
-    <Router>
-      <div className={`App ${themeMode}`}>
-        <header></header>
-        <Nav user={user} handleLogOut={handleLogOut} />
-        <main>
-          <button className="darkButton" onClick={toggleTheme}>
-            Light/Dark Mode
-          </button>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/signin" element={<SignIn setUser={setUser} />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/comments" element={<Comments user={user} />} />
-            <Route path="/feed" element={<Feed user={user} />} />
-            <Route path="/posts" element={<Posts user={user} />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <div className={`App ${themeMode}`}>
+      <header></header>
+      <Nav user={user} handleLogOut={handleLogOut} />
+      <main>
+        <button className="darkButton" onClick={toggleTheme}>
+          Light/Dark Mode
+        </button>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn setUser={setUser} />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/comments" element={<Comments user={user} />} />
+          <Route path="/feed" element={<Feed user={user} />} />
+          <Route path="/posts" element={<Posts user={user} />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 

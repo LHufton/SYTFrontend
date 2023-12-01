@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Client from '../../Services/api'
+import Client from '../../Services/api.js'
 import axios from 'axios'
 import './Posts.css'
 
